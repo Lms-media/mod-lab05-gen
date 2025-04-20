@@ -95,11 +95,8 @@ namespace generator {
       foreach (string line in lines) {
         var listLine = line.Split(" ");
         stringData.Add(listLine[1]);
-        weightData.Add((int)(double.Parse(listLine[4]) * 10));
-        Console.WriteLine(listLine[4]);
-        Console.WriteLine(double.Parse(listLine[4]));
-        Console.WriteLine(double.Parse(listLine[4].Replace(",", ".")));
-        size += (int)(double.Parse(listLine[4]) * 10);
+        weightData.Add((int)(double.Parse(listLine[4].Replace(",", ".")) * 10));
+        size += (int)(double.Parse(listLine[4].Replace(",", ".")) * 10);
       }
     }
     public string getSym() {
