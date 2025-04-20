@@ -96,6 +96,8 @@ namespace generator {
         var listLine = line.Split(" ");
         stringData.Add(listLine[1]);
         weightData.Add((int)(double.Parse(listLine[4]) * 10));
+        Console.WriteLine(listLine[4]);
+        Console.WriteLine(double.Parse(listLine[4]));
         size += (int)(double.Parse(listLine[4]) * 10);
       }
     }
